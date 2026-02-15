@@ -1,16 +1,15 @@
 name = "cloudflare-pages-demo"
+compatibility_date = "2026-02-15"
 
-# Cloudflare Pages configuration
-# When deploying via Cloudflare Pages (Git integration), these settings
-# are also configurable in the dashboard.
+# Cloudflare Pages configuration for static assets
+# This tells wrangler where to find the built files to deploy
 
-[build]
-command = "npm run build"
-output_dir = "dist"
+[assets]
+directory = "./dist"
 
-# Environment variables can also be set here.
-# However, it's recommended to use the Cloudflare Pages dashboard
-# for sensitive values. Dashboard vars override these.
+# Environment variables can also be set here, but it's recommended
+# to use the Cloudflare Pages dashboard for sensitive values.
+# Dashboard vars override these.
 
 # [vars]
 # VITE_APP_TITLE = "Cloudflare Pages Demo"
